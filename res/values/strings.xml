@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="intent_receiver_title">Intent Receiver</string>
+    <string name="app_name">ReddAlarm</string>
+    <string name="hello">Hello World, ReddAlarm!</string>
+    <string name="alarm_turn_off">Silence &amp; Launch Entertainment</string>
+    <string name="company_name">O\'Grady David</string>
+    <string name="company_website">BCR 294</string>
+    <string name="app_title">ReddAlarm</string>
+    <string name="main_new_alarm">New Alarm</string>
+    <dimen name="main_item_std_dim">70dip</dimen>
+    <dimen name="main_list_left_margin">10dip</dimen>
+    <string name="set_alarm_title">Set Alarm</string>
+    <string name="set_alarm_time_title">time</string>
+    <string name="set_alarm_website_title">website</string>
+    <string name="set_alarm_sound_title">alarm sound</string>
+    <string name="set_alarm_message_title">message</string>
+    <string name="popup_website_accept">Accept</string>
+    <string name="popup_message_accept">Accept</string>
+    <string name="popup_time_accept">Accept</string>
+    <dimen name="brand_company_size">9dip</dimen>
+    <string name="main_about">About</string>
+    <dimen name="main_large_font">36dip</dimen>
+    <dimen name="main_time_size">30dip</dimen>
+    <dimen name="main_website_size">14dip</dimen>
+    <dimen name="main_item_title_dim">90dp</dimen>
+    <dimen name="main_about_width">100dp</dimen>
+    <dimen name="main_about_height">40dip</dimen>
+    <string name="ab_fintan_contribution">Android App by</string>
+    <string name="ab_fintan_name">Fintan  O\'Grady</string>
+    <string name="ab_nighelles_contribution">iPhone app indev by</string>
+    <string name="ab_nighelles_name">Nighelles David</string>
+    <dimen name="ab_name_text_size">32dp</dimen>
+    <string name="ab_title">About</string>
+    <string name="ab_app_name">ReddAlarm</string>
+    <dimen name="main_item_alarm_hour_width">40dp</dimen>
+    <dimen name="main_dayhalf_size">15dp</dimen>
+    <color name="set_break_color">#77777777</color>
+    <dimen name="set_value_margin_left">10dp</dimen>
+    <string name="set_alarm_enabled_title">enabled</string>
+</resources>

@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:gravity="left" >
+    	
+    
+    <!--  Finalize Buttons  -->
+	<LinearLayout
+	    android:id="@+id/set_alarm_buttons"
+	    android:layout_width="fill_parent"
+	    android:layout_height="?android:attr/listPreferredItemHeight"
+	    android:layout_alignParentBottom="true"
+	    android:orientation="horizontal" >
+	    
+		<Button
+		    android:id="@+id/set_alarm_cancel"
+		    android:onClick="on_cancel_click"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight=".32"
+		    android:text="Cancel" />
+		
+		<Button
+		    android:id="@+id/set_alarm_delete"
+		    android:onClick="on_delete_click"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight=".38"
+		    android:text="Delete" />
+		
+		<Button
+		    android:id="@+id/set_alarm_accept"
+		    android:onClick="on_accept_click"
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent"
+		    android:layout_weight=".32"
+		    android:text="Accept" />
+		
+	</LinearLayout>
+	
+	
+	<!--  Edit fields -->
+	<ScrollView 
+	    android:layout_alignParentTop="true"
+	    android:layout_above="@id/set_alarm_buttons"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+			
+	    <LinearLayout
+	        android:layout_width="fill_parent"
+	        android:layout_height="wrap_content"
+	        android:orientation="vertical" >
+						<!--  Page title  -->			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content" >
+			    
+		        <TextView
+		            android:id="@+id/new_alarm_title"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_gravity="center_horizontal"
+		            android:gravity="center_horizontal|center_vertical"
+		            android:text="@string/set_alarm_title"
+		            android:textAppearance="?android:attr/textAppearanceLarge"
+		            android:textSize="30dip" />
+	
+		        <View
+		            android:id="@+id/view1"
+		            android:layout_width="fill_parent"
+		            android:layout_height="1dp"
+		            android:layout_alignParentLeft="true"
+		            android:layout_alignParentBottom="true"
+		            android:background="@color/set_break_color" />
+	
+			</RelativeLayout>
+			
+			
+
+			
+			<!--  time -->
+			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:onClick="on_time_click">
+		
+		        <TextView
+		            android:id="@+id/new_alarm_time_title"
+		            android:layout_alignParentTop="true"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:text="@string/set_alarm_time_title"
+		            android:textAppearance="?android:attr/textAppearanceLarge"
+		            android:textSize="30dip" />
+		        
+		        <TextView
+		            android:id="@+id/new_alarm_time_disp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@id/new_alarm_time_title"
+		            android:layout_marginLeft="@dimen/set_value_margin_left"
+		            android:text="test"
+		            android:textAppearance="?android:attr/textAppearanceSmall"
+		            android:textSize="20dip" />
+				
+		        <View 
+		            android:id="@+id/view2"
+		            android:layout_alignParentBottom="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="1dp"
+		            android:background="@color/set_break_color"/>
+	
+	        </RelativeLayout>
+	        
+			<!--  website -->
+			
+			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:onClick="on_website_click">
+		
+		        <TextView
+		            android:id="@+id/new_alarm_website_title"
+		            android:layout_alignParentTop="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/set_alarm_website_title"
+		            android:textAppearance="?android:attr/textAppearanceLarge"
+		            android:textSize="30dip" />
+				
+		        <TextView
+		            android:id="@+id/new_alarm_website_disp"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@id/new_alarm_website_title"
+		            android:layout_marginLeft="@dimen/set_value_margin_left"
+		            android:text="Test wobsite"
+		            android:textAppearance="?android:attr/textAppearanceSmall"
+		            android:textSize="20dip" />
+		        
+		        <View 
+		            android:id="@+id/view3"
+		            android:layout_alignParentBottom="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="1dp"
+		            android:background="@color/set_break_color"/>
+	
+	        
+	        </RelativeLayout>
+	        
+			<!--  alarm sound -->
+			<!--  Use default for now
+			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:onClick="on_sound_click">
+	        
+		
+		        <TextView
+		            android:id="@+id/new_alarm_sound_title"
+		            android:layout_alignParentTop="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/set_alarm_sound_title"
+		            android:textAppearance="?android:attr/textAppearanceLarge"
+		            android:textSize="30dip" />
+				
+		       	<TextView
+		            android:id="@+id/new_alarm_sound_disp"
+		        	android:layout_below="@id/new_alarm_sound_title"
+		        	android:layout_width="fill_parent"
+		        	android:layout_height="wrap_content"
+		        	android:text="Test ringtone"
+		        	android:textAppearance="?android:attr/textAppearanceSmall"
+		        	android:textSize="20dip" />
+		        
+		        <View 
+		            android:id="@+id/view4"
+		            android:layout_alignParentBottom="true"
+		            android:layout_width="fill_parent"
+		            android:layout_height="1dp"
+		            android:background="@android:color/darker_gray"/>
+	
+	        
+	        </RelativeLayout>
+	        -->
+			<!--  message -->
+			
+			<RelativeLayout
+			    android:layout_width="fill_parent"
+			    android:layout_height="wrap_content"
+			    android:onClick="on_message_click">
+	        
+	
+		        <TextView
+		            android:id="@+id/new_alarm_message_title"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:text="@string/set_alarm_message_title"
+		            android:textAppearance="?android:attr/textAppearanceLarge"
+		            android:textSize="30dip" />
+		        
+		        <TextView
+		            android:id="@+id/new_alarm_message_disp"
+		            android:layout_width="fill_parent"
+		            android:layout_height="wrap_content"
+		            android:layout_below="@id/new_alarm_message_title"
+		            android:layout_marginLeft="@dimen/set_value_margin_left"
+		            android:text="The links are blue again!"
+		            android:textAppearance="?android:attr/textAppearanceSmall"
+		            android:textSize="20dip" />
+		        
+		        <View 
+		            android:id="@+id/view5"
+		            android:layout_width="fill_parent"
+		            android:layout_alignParentBottom="true"
+		            android:layout_height="1dp"
+		            android:background="@color/set_break_color"/>
+	
+	        </RelativeLayout>
+	        
+	        
+	    </LinearLayout>
+	    
+	
+	</ScrollView>
+
+</RelativeLayout>

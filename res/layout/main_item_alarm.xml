@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="?android:attr/listPreferredItemHeight"
+    android:gravity="right"
+    android:orientation="horizontal" >
+
+	<!-- Time display -->
+		<!--  hour  -->
+
+    <TextView
+        android:id="@+id/main_item_alarm_hour"
+        android:layout_width="@dimen/main_item_alarm_hour_width"
+        android:layout_height="fill_parent"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical|right"
+        android:text="time"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/main_time_size" />
+    
+    	<!-- colon -->
+    <TextView
+        android:id="@+id/main_item_alarm_colon"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_toRightOf="@id/main_item_alarm_hour"
+        android:layout_alignBaseline="@id/main_item_alarm_hour"
+        android:text=":"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/main_time_size" />
+    
+    	<!-- minutes -->
+
+    <TextView
+        android:id="@+id/main_item_alarm_minutes"
+        android:layout_width="wrap_content"
+        android:layout_height="fill_parent"
+        android:layout_marginRight="3dp"
+        android:layout_toRightOf="@id/main_item_alarm_colon"
+        android:layout_alignBaseline="@id/main_item_alarm_colon"
+        android:text="time"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:textSize="@dimen/main_time_size" />
+    
+		<!-- Time am/pm indicator (much smaller) -->	<TextView
+        android:id="@+id/main_item_alarm_dayhalf"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@id/main_item_alarm_minutes"
+        android:layout_alignBaseline="@id/main_item_alarm_minutes"
+        android:text="AMPM"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/main_dayhalf_size" />	    	
+	<!-- Website -->
+    <TextView
+        android:id="@+id/main_item_alarm_website"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginRight="5dip"
+        android:layout_toLeftOf="@+id/main_item_alarm_toggle"
+        android:text="wobsite"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:textSize="@dimen/main_website_size" />
+
+	<!-- Vertical Line -->	<View
+	    android:layout_width="1dp"
+	    android:layout_height="fill_parent"
+	    android:layout_toLeftOf="@id/main_item_alarm_toggle"
+	    android:layout_alignParentBottom="true"
+	    android:background="#77777777"/>	<!--  Toggle enabled  -->
+    <ToggleButton
+        android:id="@+id/main_item_alarm_toggle"
+        android:background="@drawable/android_button"
+        android:layout_width="?android:attr/listPreferredItemHeight"
+        android:layout_height="fill_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"/>
+    
+    
+
+</RelativeLayout>

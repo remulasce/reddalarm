@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/alarm_root"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+	    <Button
+        android:id="@+id/alarm_silence_launch"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:text="@string/alarm_turn_off"/>
+    
+
+    <ProgressBar
+        android:id="@+id/alarm_progress"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="2dip">
+    </ProgressBar>
+    <view class="com.remulasce.reddalarm.AlarmActivity$ReddWebView"
+	    android:id="@+id/webview"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent"
+	    android:layout_above="@id/alarm_progress"
+        android:layout_below="@id/alarm_silence_launch" />
+</RelativeLayout>
